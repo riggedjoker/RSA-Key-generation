@@ -6,7 +6,7 @@ This repository contains a simple Python script that implements RSA encryption a
 
 - **RSA Key Generation**:
   - Generate public and private keys using user-provided prime numbers \( p \) and \( q \), and public exponent \( e \).
-  - Ensures that \( e \) is coprime with \( \phi(n) \), where \( n = p \times q \) and \( \phi(n) = (p - 1) \times (q - 1) \).
+  - Ensures that \( e \) is coprime with \( Φ \), where \( n = p times q \) and \( Φ = (p - 1) times (q - 1) \).
 - **Encryption**:
   - Encrypts plaintext (text or numeric input) using the generated public key.
 
@@ -16,11 +16,11 @@ The RSA algorithm in this script operates as follows:
 
 1. **Key Generation**:
    - Calculates \( n \) (the modulus) as \( p \times q \).
-   - Computes \( \phi(n) \) (Euler's totient function) as \( (p - 1) \times (q - 1) \).
-   - Ensures \( \text{gcd}(e, \phi(n)) = 1 \).
-   - Finds \( d \), the modular multiplicative inverse of \( e \) modulo \( \phi(n) \).
+   - Computes \( Φ \) (Euler's totient function) as \( (p - 1) \times (q - 1) \).
+   - Ensures \( gcd(e, Φ(n)) = 1 \).
+   - Finds \( d \), the modular multiplicative inverse of \( e \) modulo \( Φ(n) \).
 2. **Encryption**:
-   - Uses the formula \( c = m^e \mod n \), where \( m \) is the plaintext and \( c \) is the ciphertext.
+   - Uses the formula \( c = m^e mod n \), where \( m \) is the plaintext and \( c \) is the ciphertext.
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ The RSA algorithm in this script operates as follows:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/simple-rsa-script.git
-   cd simple-rsa-script
+   git clone https://github.com/riggedjoker/RSA-Key-generation.git
+   cd RSA-Key-generation
    ```
 
 2. Run the script:
@@ -41,7 +41,7 @@ The RSA algorithm in this script operates as follows:
 
 3. Follow the prompts to:
    - Enter two prime numbers \( p \) and \( q \).
-   - Provide a public exponent \( e \) that is coprime with \( \phi(n) \).
+   - Provide a public exponent \( e \) that is coprime with \( Φ \).
    - Input a plaintext message (as text or a numeric value).
 
 ## Example Usage
